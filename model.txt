@@ -1,0 +1,15 @@
+numbers_inventory = []
+
+def add_shoe(brand, model, size):
+    shoe = {"brand": brand, "model": model, "size": size}
+    numbers_inventory.append(shoe)
+
+def remove_shoe(index):
+    if 0 <= index < len(numbers_inventory):
+        removed_shoe = numbers_inventory.pop(index)
+        return removed_shoe
+    else:
+        return None
+
+def get_all_numbers():
+    return numbers_inventory
