@@ -1,0 +1,16 @@
+def display_menu():
+    print("1. Сложение")
+    print("2. Вычитание")
+    print("3. Умножение")
+    print("4. Деление")
+
+def display_all_numbers(numbers_inventory):
+    print("\n Numbers:")
+    for i, shoe in enumerate(numbers_inventory):
+        print(f"{i+1}. Positive/negative: {shoe['size']}")
+
+def display_success(message):
+    print(f"\nУспешно: {message}")
+
+def display_error(message):
+    print(f"\nОшибка: {message}")
