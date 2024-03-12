@@ -1,0 +1,36 @@
+from model import add_shoe, remove_shoe, get_all_numbers
+from view import display_menu, display_all_numbers, display_success, display_error
+
+def main():
+    while True:
+        display_menu()
+        choice = input("\nВыберите действие (1-4): ")
+
+        if choice == "1":
+            first_num = float(input("Enter first number"))
+            second_num = float(input("Enter second number"))
+            print(first_num + second_num)
+            display_all_numbers(get_all_numbers())
+
+        elif choice == "2":
+            first_num = float(input("Enter first number"))
+            second_num = float(input("Enter second number"))
+            print(first_num - second_num)
+            display_all_numbers(get_all_numbers())
+
+        elif choice == "3":
+            first_num = float(input("Enter first number"))
+            second_num = float(input("Enter second number"))
+            print(first_num * second_num)
+            display_all_numbers(get_all_numbers())
+
+        elif choice == "4":
+            first_num = float(input("Enter first number"))
+            second_num = float(input("Enter second number"))
+            print(first_num / second_num)
+            display_all_numbers(get_all_numbers())
+        else:
+            display_error("Неверный выбор. Пожалуйста, выберите от 1 до 4.")
+
+if __name__ == "__main__":
+    main()
